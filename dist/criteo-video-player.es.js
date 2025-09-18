@@ -1056,6 +1056,7 @@ function nn(t) {
         "data-testid": "video-element",
         volume: _,
         tabIndex: 0,
+        crossorigin: "anonymous",
         children: [
           (i == null ? void 0 : i.src) && (i == null ? void 0 : i.optionalVideoRedirectUrl) && (i == null ? void 0 : i.optionalRedirectTarget) && /* @__PURE__ */ m(
             Zt,
