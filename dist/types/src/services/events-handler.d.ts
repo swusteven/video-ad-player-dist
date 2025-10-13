@@ -4,6 +4,7 @@ export declare class EventsHandler {
     private readonly vastInformation;
     private readonly mediaEvents;
     currentLoop: number;
+    adImpressionSent: boolean;
     adStartedSent: boolean;
     adFirstQuartileSent: boolean;
     adMidpointSent: boolean;
@@ -18,6 +19,7 @@ export declare class EventsHandler {
     unmute(volume: number): void;
     bufferStart(): void;
     bufferFinish(): void;
+    private sendAdImpression;
     private sendAdStarted;
     private sendFirstQuartile;
     private sendMidpoint;
