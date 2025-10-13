@@ -19,7 +19,7 @@ export declare class EventsHandler {
     unmute(volume: number): void;
     bufferStart(): void;
     bufferFinish(): void;
-    private sendAdImpression;
+    sendAdImpression(): void;
     private sendAdStarted;
     private sendFirstQuartile;
     private sendMidpoint;

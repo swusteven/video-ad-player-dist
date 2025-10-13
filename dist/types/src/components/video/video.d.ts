@@ -2,8 +2,6 @@ import { VastInformation } from '../../services/vast-model';
 export interface VideoOptions {
     /** A short, descriptive text alternative for the video content. */
     altText: string;
-    /** Defines an image to display when the video fails to load or before playback begins. */
-    fallbackImage?: FallbackImageProps;
     /** Sets the maximum allowed volume level for playback (range: 0–1). Default is 1 */
     maxVolume?: number;
     /** Custom label for the Closed Caption (CC) button in the player UI. */
@@ -17,14 +15,6 @@ export interface VideoOptions {
         width: number;
         height: number;
     };
-}
-export interface FallbackImageProps {
-    /** The source URL of the fallback image. */
-    src: string;
-    /** Optional URL to redirect to when the fallback image is clicked. */
-    optionalVideoRedirectUrl: string;
-    /** Optional target for the redirect (e.g., '_blank' for new tab). */
-    optionalRedirectTarget: string;
 }
 interface VideoProps {
     /** Configuration options for the video player including accessibility, dimensions, and OMID settings. */
