@@ -19,8 +19,7 @@ export interface MediaEvents {
 }
 interface AdVerification {
     onAdLoaded: () => void;
-    setVideoContext: (video: HTMLVideoElement) => void;
     mediaEvents: MediaEvents;
 }
-export declare function setupAdVerification(vastInformation: VastInformation, sessionClientUrl: string, omWebUrl: string, video?: RefObject<HTMLVideoElement> | null): Promise<AdVerification | null>;
+export declare function setupAdVerification(vastInformation: VastInformation, sessionClientUrl: string, omWebUrl: string, videoRef: RefObject<HTMLVideoElement>): Promise<AdVerification | null>;
 export {};
