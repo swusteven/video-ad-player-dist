@@ -102,8 +102,8 @@ class We {
     );
   }
 }
-var re, h, Qe, D, be, je, ze, Ke, ue, se, _e, Q = {}, Ze = [], wt = /acit|ex(?:s|g|n|p|$)|rph|grid|ows|mnc|ntw|ine[ch]|zoo|^ord|itera/i, z = Array.isArray;
-function I(t, e) {
+var re, h, Qe, q, be, je, ze, Ke, ue, se, _e, Q = {}, Ze = [], wt = /acit|ex(?:s|g|n|p|$)|rph|grid|ows|mnc|ntw|ine[ch]|zoo|^ord|itera/i, z = Array.isArray;
+function V(t, e) {
   for (var n in e) t[n] = e[n];
   return t;
 }
@@ -123,7 +123,7 @@ function J(t, e, n, r, i) {
 function O(t) {
   return t.children;
 }
-function V(t, e) {
+function U(t, e) {
   this.props = t, this.context = e;
 }
 function X(t, e) {
@@ -142,16 +142,16 @@ function Je(t) {
   }
 }
 function Ce(t) {
-  (!t.__d && (t.__d = !0) && D.push(t) && !ee.__r++ || be != h.debounceRendering) && ((be = h.debounceRendering) || je)(ee);
+  (!t.__d && (t.__d = !0) && q.push(t) && !ee.__r++ || be != h.debounceRendering) && ((be = h.debounceRendering) || je)(ee);
 }
 function ee() {
-  for (var t, e, n, r, i, o, _, a = 1; D.length; ) D.length > a && D.sort(ze), t = D.shift(), a = D.length, t.__d && (n = void 0, i = (r = (e = t).__v).__e, o = [], _ = [], e.__P && ((n = I({}, r)).__v = r.__v + 1, h.vnode && h.vnode(n), de(e.__P, n, r, e.__n, e.__P.namespaceURI, 32 & r.__u ? [i] : null, o, i ?? X(r), !!(32 & r.__u), _), n.__v = r.__v, n.__.__k[n.__i] = n, et(o, n, _), n.__e != i && Je(n)));
+  for (var t, e, n, r, i, o, _, a = 1; q.length; ) q.length > a && q.sort(ze), t = q.shift(), a = q.length, t.__d && (n = void 0, i = (r = (e = t).__v).__e, o = [], _ = [], e.__P && ((n = V({}, r)).__v = r.__v + 1, h.vnode && h.vnode(n), de(e.__P, n, r, e.__n, e.__P.namespaceURI, 32 & r.__u ? [i] : null, o, i ?? X(r), !!(32 & r.__u), _), n.__v = r.__v, n.__.__k[n.__i] = n, et(o, n, _), n.__e != i && Je(n)));
   ee.__r = 0;
 }
 function Ge(t, e, n, r, i, o, _, a, c, l, f) {
-  var s, d, u, C, E, g, v, m = r && r.__k || Ze, M = e.length;
-  for (c = kt(n, e, m, c, M), s = 0; s < M; s++) (u = n.__k[s]) != null && (d = u.__i == -1 ? Q : m[u.__i] || Q, u.__i = s, g = de(t, u, d, i, o, _, a, c, l, f), C = u.__e, u.ref && d.ref != u.ref && (d.ref && pe(d.ref, null, u), f.push(u.ref, u.__c || C, u)), E == null && C != null && (E = C), (v = !!(4 & u.__u)) || d.__k === u.__k ? c = Ye(u, c, t, v) : typeof u.type == "function" && g !== void 0 ? c = g : C && (c = C.nextSibling), u.__u &= -7);
-  return n.__e = E, c;
+  var s, d, u, C, F, g, v, m = r && r.__k || Ze, L = e.length;
+  for (c = kt(n, e, m, c, L), s = 0; s < L; s++) (u = n.__k[s]) != null && (d = u.__i == -1 ? Q : m[u.__i] || Q, u.__i = s, g = de(t, u, d, i, o, _, a, c, l, f), C = u.__e, u.ref && d.ref != u.ref && (d.ref && pe(d.ref, null, u), f.push(u.ref, u.__c || C, u)), F == null && C != null && (F = C), (v = !!(4 & u.__u)) || d.__k === u.__k ? c = Ye(u, c, t, v) : typeof u.type == "function" && g !== void 0 ? c = g : C && (c = C.nextSibling), u.__u &= -7);
+  return n.__e = F, c;
 }
 function kt(t, e, n, r, i) {
   var o, _, a, c, l, f = n.length, s = f, d = 0;
@@ -216,30 +216,30 @@ function ke(t) {
   };
 }
 function de(t, e, n, r, i, o, _, a, c, l) {
-  var f, s, d, u, C, E, g, v, m, M, T, U, $, S, A, q, B, x = e.type;
+  var f, s, d, u, C, F, g, v, m, L, T, A, $, D, S, I, B, x = e.type;
   if (e.constructor != null) return null;
   128 & n.__u && (c = !!(32 & n.__u), o = [a = e.__e = n.__e]), (f = h.__b) && f(e);
   e: if (typeof x == "function") try {
-    if (v = e.props, m = "prototype" in x && x.prototype.render, M = (f = x.contextType) && r[f.__c], T = f ? M ? M.props.value : f.__ : r, n.__c ? g = (s = e.__c = n.__c).__ = s.__E : (m ? e.__c = s = new x(v, T) : (e.__c = s = new V(v, T), s.constructor = x, s.render = St), M && M.sub(s), s.props = v, s.state || (s.state = {}), s.context = T, s.__n = r, d = s.__d = !0, s.__h = [], s._sb = []), m && s.__s == null && (s.__s = s.state), m && x.getDerivedStateFromProps != null && (s.__s == s.state && (s.__s = I({}, s.__s)), I(s.__s, x.getDerivedStateFromProps(v, s.__s))), u = s.props, C = s.state, s.__v = e, d) m && x.getDerivedStateFromProps == null && s.componentWillMount != null && s.componentWillMount(), m && s.componentDidMount != null && s.__h.push(s.componentDidMount);
+    if (v = e.props, m = "prototype" in x && x.prototype.render, L = (f = x.contextType) && r[f.__c], T = f ? L ? L.props.value : f.__ : r, n.__c ? g = (s = e.__c = n.__c).__ = s.__E : (m ? e.__c = s = new x(v, T) : (e.__c = s = new U(v, T), s.constructor = x, s.render = St), L && L.sub(s), s.props = v, s.state || (s.state = {}), s.context = T, s.__n = r, d = s.__d = !0, s.__h = [], s._sb = []), m && s.__s == null && (s.__s = s.state), m && x.getDerivedStateFromProps != null && (s.__s == s.state && (s.__s = V({}, s.__s)), V(s.__s, x.getDerivedStateFromProps(v, s.__s))), u = s.props, C = s.state, s.__v = e, d) m && x.getDerivedStateFromProps == null && s.componentWillMount != null && s.componentWillMount(), m && s.componentDidMount != null && s.__h.push(s.componentDidMount);
     else {
       if (m && x.getDerivedStateFromProps == null && v !== u && s.componentWillReceiveProps != null && s.componentWillReceiveProps(v, T), !s.__e && s.shouldComponentUpdate != null && s.shouldComponentUpdate(v, s.__s, T) === !1 || e.__v == n.__v) {
         for (e.__v != n.__v && (s.props = v, s.state = s.__s, s.__d = !1), e.__e = n.__e, e.__k = n.__k, e.__k.some(function(H) {
           H && (H.__ = e);
-        }), U = 0; U < s._sb.length; U++) s.__h.push(s._sb[U]);
+        }), A = 0; A < s._sb.length; A++) s.__h.push(s._sb[A]);
         s._sb = [], s.__h.length && _.push(s);
         break e;
       }
       s.componentWillUpdate != null && s.componentWillUpdate(v, s.__s, T), m && s.componentDidUpdate != null && s.__h.push(function() {
-        s.componentDidUpdate(u, C, E);
+        s.componentDidUpdate(u, C, F);
       });
     }
-    if (s.context = T, s.props = v, s.__P = t, s.__e = !1, $ = h.__r, S = 0, m) {
-      for (s.state = s.__s, s.__d = !1, $ && $(e), f = s.render(s.props, s.state, s.context), A = 0; A < s._sb.length; A++) s.__h.push(s._sb[A]);
+    if (s.context = T, s.props = v, s.__P = t, s.__e = !1, $ = h.__r, D = 0, m) {
+      for (s.state = s.__s, s.__d = !1, $ && $(e), f = s.render(s.props, s.state, s.context), S = 0; S < s._sb.length; S++) s.__h.push(s._sb[S]);
       s._sb = [];
     } else do
       s.__d = !1, $ && $(e), f = s.render(s.props, s.state, s.context), s.state = s.__s;
-    while (s.__d && ++S < 25);
-    s.state = s.__s, s.getChildContext != null && (r = I(I({}, r), s.getChildContext())), m && !d && s.getSnapshotBeforeUpdate != null && (E = s.getSnapshotBeforeUpdate(u, C)), q = f, f != null && f.type === O && f.key == null && (q = tt(f.props.children)), a = Ge(t, z(q) ? q : [q], e, n, r, i, o, _, a, c, l), s.base = e.__e, e.__u &= -161, s.__h.length && _.push(s), g && (s.__E = s.__ = null);
+    while (s.__d && ++D < 25);
+    s.state = s.__s, s.getChildContext != null && (r = V(V({}, r), s.getChildContext())), m && !d && s.getSnapshotBeforeUpdate != null && (F = s.getSnapshotBeforeUpdate(u, C)), I = f, f != null && f.type === O && f.key == null && (I = tt(f.props.children)), a = Ge(t, z(I) ? I : [I], e, n, r, i, o, _, a, c, l), s.base = e.__e, e.__u &= -161, s.__h.length && _.push(s), g && (s.__E = s.__ = null);
   } catch (H) {
     if (e.__v = null, c || o != null) if (H.then) {
       for (e.__u |= c ? 160 : 128; a && a.nodeType == 8 && a.nextSibling; ) a = a.nextSibling;
@@ -270,10 +270,10 @@ function et(t, e, n) {
   });
 }
 function tt(t) {
-  return typeof t != "object" || t == null || t.__b && t.__b > 0 ? t : z(t) ? t.map(tt) : I({}, t);
+  return typeof t != "object" || t == null || t.__b && t.__b > 0 ? t : z(t) ? t.map(tt) : V({}, t);
 }
 function Ft(t, e, n, r, i, o, _, a, c) {
-  var l, f, s, d, u, C, E, g = n.props, v = e.props, m = e.type;
+  var l, f, s, d, u, C, F, g = n.props, v = e.props, m = e.type;
   if (m == "svg" ? i = "http://www.w3.org/2000/svg" : m == "math" ? i = "http://www.w3.org/1998/Math/MathML" : i || (i = "http://www.w3.org/1999/xhtml"), o != null) {
     for (l = 0; l < o.length; l++) if ((u = o[l]) && "setAttribute" in u == !!m && (m ? u.localName == m : u.nodeType == 3)) {
       t = u, o[l] = null;
@@ -294,10 +294,10 @@ function Ft(t, e, n, r, i, o, _, a, c) {
         K(t, l, null, u, i);
       }
     }
-    for (l in v) u = v[l], l == "children" ? d = u : l == "dangerouslySetInnerHTML" ? f = u : l == "value" ? C = u : l == "checked" ? E = u : a && typeof u != "function" || g[l] === u || K(t, l, u, g[l], i);
+    for (l in v) u = v[l], l == "children" ? d = u : l == "dangerouslySetInnerHTML" ? f = u : l == "value" ? C = u : l == "checked" ? F = u : a && typeof u != "function" || g[l] === u || K(t, l, u, g[l], i);
     if (f) a || s && (f.__html == s.__html || f.__html == t.innerHTML) || (t.innerHTML = f.__html), e.__k = [];
     else if (s && (t.innerHTML = ""), Ge(e.type == "template" ? t.content : t, z(d) ? d : [d], e, n, r, m == "foreignObject" ? "http://www.w3.org/1999/xhtml" : i, o, _, o ? o[0] : n.__k && X(n, 0), a, c), o != null) for (l = o.length; l--; ) fe(o[l]);
-    a || (l = "value", m == "progress" && C == null ? t.removeAttribute("value") : C != null && (C !== t[l] || m == "progress" && !C || m == "option" && C != g[l]) && K(t, l, C, g[l], i), l = "checked", E != null && E != t[l] && K(t, l, E, g[l], i));
+    a || (l = "value", m == "progress" && C == null ? t.removeAttribute("value") : C != null && (C !== t[l] || m == "progress" && !C || m == "option" && C != g[l]) && K(t, l, C, g[l], i), l = "checked", F != null && F != t[l] && K(t, l, F, g[l], i));
   }
   return t;
 }
@@ -338,12 +338,12 @@ re = Ze.slice, h = { __e: function(t, e, n, r) {
     t = a;
   }
   throw t;
-} }, Qe = 0, V.prototype.setState = function(t, e) {
+} }, Qe = 0, U.prototype.setState = function(t, e) {
   var n;
-  n = this.__s != null && this.__s != this.state ? this.__s : this.__s = I({}, this.state), typeof t == "function" && (t = t(I({}, n), this.props)), t && I(n, t), t != null && this.__v && (e && this._sb.push(e), Ce(this));
-}, V.prototype.forceUpdate = function(t) {
+  n = this.__s != null && this.__s != this.state ? this.__s : this.__s = V({}, this.state), typeof t == "function" && (t = t(V({}, n), this.props)), t && V(n, t), t != null && this.__v && (e && this._sb.push(e), Ce(this));
+}, U.prototype.forceUpdate = function(t) {
   this.__v && (this.__e = !0, t && this.__h.push(t), Ce(this));
-}, V.prototype.render = O, D = [], je = typeof Promise == "function" ? Promise.prototype.then.bind(Promise.resolve()) : setTimeout, ze = function(t, e) {
+}, U.prototype.render = O, q = [], je = typeof Promise == "function" ? Promise.prototype.then.bind(Promise.resolve()) : setTimeout, ze = function(t, e) {
   return t.__v.__b - e.__v.__b;
 }, ee.__r = 0, Ke = /(PointerCapture)$|Capture$/i, ue = 0, se = ke(!1), _e = ke(!0);
 var Mt = 0;
@@ -492,7 +492,7 @@ function Ae(t, e) {
 function Ie(t, e) {
   this.props = t, this.context = e;
 }
-(Ie.prototype = new V()).isPureReactComponent = !0, Ie.prototype.shouldComponentUpdate = function(t, e) {
+(Ie.prototype = new U()).isPureReactComponent = !0, Ie.prototype.shouldComponentUpdate = function(t, e) {
   return Ae(this.props, t) || Ae(this.state, e);
 };
 var Ve = h.__b;
@@ -532,7 +532,7 @@ function Z() {
 h.unmount = function(t) {
   var e = t.__c;
   e && e.__R && e.__R(), e && 32 & t.__u && (t.type = null), Ue && Ue(t);
-}, (oe.prototype = new V()).__c = function(t, e) {
+}, (oe.prototype = new U()).__c = function(t, e) {
   var n = e.__c, r = this;
   r.o == null && (r.o = []), r.o.push(n);
   var i = lt(r.__v), o = !1, _ = function() {
@@ -570,7 +570,7 @@ var $e = function(t, e, n) {
     t.i = n = n[2];
   }
 };
-(Z.prototype = new V()).__a = function(t) {
+(Z.prototype = new U()).__a = function(t) {
   var e = this, n = lt(e.__v), r = e.l.get(t);
   return r[0]++, function(i) {
     var o = function() {
@@ -593,8 +593,8 @@ var $e = function(t, e, n) {
 var Ut = typeof Symbol < "u" && Symbol.for && Symbol.for("react.element") || 60103, $t = /^(?:accent|alignment|arabic|baseline|cap|clip(?!PathU)|color|dominant|fill|flood|font|glyph(?!R)|horiz|image(!S)|letter|lighting|marker(?!H|W|U)|overline|paint|pointer|shape|stop|strikethrough|stroke|text(?!L)|transform|underline|unicode|units|v|vector|vert|word|writing|x(?!C))[A-Z]/, Ht = /^on(Ani|Tra|Tou|BeforeInp|Compo)/, Nt = /[A-Z0-9]/g, Rt = typeof document < "u", qt = function(t) {
   return (typeof Symbol < "u" && typeof Symbol() == "symbol" ? /fil|che|rad/ : /fil|che|ra/).test(t);
 };
-V.prototype.isReactComponent = {}, ["componentWillMount", "componentWillReceiveProps", "componentWillUpdate"].forEach(function(t) {
-  Object.defineProperty(V.prototype, t, { configurable: !0, get: function() {
+U.prototype.isReactComponent = {}, ["componentWillMount", "componentWillReceiveProps", "componentWillUpdate"].forEach(function(t) {
+  Object.defineProperty(U.prototype, t, { configurable: !0, get: function() {
     return this["UNSAFE_" + t];
   }, set: function(e) {
     Object.defineProperty(this, t, { configurable: !0, writable: !0, value: e });
@@ -782,15 +782,16 @@ const P = (t) => {
       console.error("Could not send beacon", e);
     }
 };
-async function Jt(t, e, n) {
+async function Jt(t, e, n, r = null) {
   if (t.adVerifications.length < 1)
     return console.log("No ad verifications found"), null;
   if (e === "" || n === "")
     return console.log("Missing sessionClientUrl or omWebUrl. Abort loading OMID verification."), null;
   if ((!window.OmidSessionClient || !window.OmidSessionClient.default) && await Gt(e, n), !window.OmidSessionClient || !window.OmidSessionClient.default)
     return console.error("OMID Session Client not loaded"), null;
-  const r = window.OmidSessionClient.default, i = r.AdSession, o = r.Partner, _ = r.Context, a = r.VerificationScriptResource, c = r.MediaEvents, l = r.AdEvents, f = window.location.href, s = "criteo", d = Object.keys(window.OmidSessionClient)[0], u = new o(s, d), C = window.top, E = [];
+  const i = window.OmidSessionClient.default, o = i.AdSession, _ = i.Partner, a = i.Context, c = i.VerificationScriptResource, l = i.MediaEvents, f = i.AdEvents, s = window.location.href, d = "criteo", u = Object.keys(window.OmidSessionClient)[0], C = new _(d, u), F = window.top, g = [];
   for (const S of t.adVerifications) {
+    debugger;
     if (S.apiFramework != "omid") {
       if (console.log(
         "detected non-omid compatible script, skipping load, attempting to fire verificationNotExecuted"
@@ -804,8 +805,8 @@ async function Jt(t, e, n) {
       );
       continue;
     }
-    E.push(
-      new a(
+    g.push(
+      new c(
         S.javascriptResource,
         S.vendor,
         S.verificationParameters,
@@ -813,23 +814,23 @@ async function Jt(t, e, n) {
       )
     );
   }
-  if (E.length < 1)
+  if (g.length < 1)
     return console.log("no valid verification tags detected"), null;
-  const g = new _(u, E, f);
-  g.setServiceWindow(C);
-  const v = new i(g);
-  if (v.setCreativeType("video"), v.setImpressionType("beginToRender"), !v.isSupported())
+  const v = new a(C, g, s);
+  v.setServiceWindow(F), v.setVideoElement((r == null ? void 0 : r.current) || null);
+  const m = new o(v);
+  if (m.setCreativeType("video"), m.setImpressionType("beginToRender"), !m.isSupported())
     return console.log("This AdSession is not supported"), null;
-  const m = new l(v), M = r.VastProperties, T = new c(v);
-  return v.start(), { onAdLoaded: () => {
-    v.registerSessionObserver((S) => {
+  const L = new f(m), T = i.VastProperties, A = new l(m);
+  return m.start(), { onAdLoaded: () => {
+    m.registerSessionObserver((S) => {
       if (S.type === "sessionStart") {
-        const A = new M(!1, 0, !0, "standalone");
-        m.loaded(A), m.impressionOccurred(), console.log("OMID AdEvent loaded and impression occurred");
+        const I = new T(!1, 0, !0, "standalone");
+        L.loaded(I), L.impressionOccurred(), console.log("OMID AdEvent loaded and impression occurred");
       }
     });
-  }, mediaEvents: T, setVideoContext: (S) => {
-    g.setVideoElement(S);
+  }, mediaEvents: A, setVideoContext: (S) => {
+    v.setVideoElement(S);
   } };
 }
 async function Gt(t, e) {
@@ -866,8 +867,8 @@ function Yt(t) {
   for (const a of e) {
     let c = 1 / 0;
     if (typeof a.aspectRatio == "number" && typeof r == "number" && (c = Math.abs(a.aspectRatio - r)), c < _ && (_ = c, o = a), o && o.mediaUrl !== a.mediaUrl && o.aspectRatio === a.aspectRatio) {
-      const l = n == null ? void 0 : n.width, f = n == null ? void 0 : n.height, s = Xe(l, a.width), d = Be(f, a.height), u = Xe(l, o.width), C = Be(f, o.height), E = s + d, g = u + C;
-      E < g && (o = a);
+      const l = n == null ? void 0 : n.width, f = n == null ? void 0 : n.height, s = Xe(l, a.width), d = Be(f, a.height), u = Xe(l, o.width), C = Be(f, o.height), F = s + d, g = u + C;
+      F < g && (o = a);
     }
   }
   return i.mediaUrl = o == null ? void 0 : o.mediaUrl, i.closedCaptionFile = (o == null ? void 0 : o.closedCaptionFile) || void 0, i.closedCaptionLanguage = (o == null ? void 0 : o.closedCaptionLanguage) || "", i;
@@ -946,16 +947,16 @@ function nn(t) {
     ccButtonLabel: a,
     sessionClientUrl: c,
     omWebUrl: l
-  } = n, f = Yt({ mediaFiles: r, targetDimensions: _ }), s = G(null), d = G(null), u = G(!1), [C, E] = W(!0), [g, v] = W(!1), [m, M] = W(!1), [T, U] = W(!0), [$, S] = W(null), A = () => {
-    E((p) => {
-      var b, F;
-      return p ? (b = d.current) == null || b.mute() : (F = d.current) == null || F.unmute(o || 1), !p;
+  } = n, f = Yt({ mediaFiles: r, targetDimensions: _ }), s = G(null), d = G(null), u = G(!1), [C, F] = W(!0), [g, v] = W(!1), [m, L] = W(!1), [T, A] = W(!0), [$, D] = W(null), S = () => {
+    F((p) => {
+      var b, E;
+      return p ? (b = d.current) == null || b.mute() : (E = d.current) == null || E.unmute(o || 1), !p;
     });
-  }, q = (p) => {
-    var F, L;
-    m && (M(!1), (F = d.current) == null || F.bufferFinish());
+  }, I = (p) => {
+    var E, M;
+    m && (L(!1), (E = d.current) == null || E.bufferFinish());
     const b = p.target;
-    (L = d.current) == null || L.setTime(
+    (M = d.current) == null || M.setTime(
       b.currentTime,
       b.duration,
       b.volume
@@ -968,8 +969,8 @@ function nn(t) {
   }, H = () => {
     new IntersectionObserver(
       (b) => {
-        for (let F = 0; F < b.length; F++) {
-          let N = b[F].isIntersecting;
+        for (let E = 0; E < b.length; E++) {
+          let N = b[E].isIntersecting;
           N && !u.current ? (s.current.play(), v(!0), u.current = !0) : !N && u.current && (s.current.pause(), v(!1), u.current = !1);
         }
       },
@@ -979,14 +980,15 @@ function nn(t) {
     const p = await Jt(
       e,
       c || "",
-      l || ""
+      l || "",
+      s
     );
     if (p === null) {
       d.current = new De(e, null);
       return;
     }
-    const { onAdLoaded: b, setVideoContext: F, mediaEvents: L } = p;
-    d.current = new De(e, L), F(s.current), s.current.readyState >= HTMLMediaElement.HAVE_FUTURE_DATA ? b() : s.current.addEventListener("canplay", b, { once: !0 });
+    const { onAdLoaded: b, setVideoContext: E, mediaEvents: M } = p;
+    d.current = new De(e, M), s.current.readyState >= HTMLMediaElement.HAVE_FUTURE_DATA ? b() : s.current.addEventListener("canplay", b, { once: !0 });
   }, dt = () => {
     var p;
     s.current.readyState >= HTMLMediaElement.HAVE_FUTURE_DATA ? (p = d.current) == null || p.sendAdImpression() : s.current.addEventListener("canplay", () => {
@@ -1002,21 +1004,21 @@ function nn(t) {
   }, []);
   const ve = () => {
     v((p) => {
-      var F, L;
+      var E, M;
       const b = !p;
-      return p ? (s.current.pause(), (F = d.current) == null || F.pause()) : (s.current.play(), (L = d.current) == null || L.play()), u.current = b, b;
+      return p ? (s.current.pause(), (E = d.current) == null || E.pause()) : (s.current.play(), (M = d.current) == null || M.play()), u.current = b, b;
     });
   }, pt = () => {
     var p;
-    M(!0), (p = d.current) == null || p.bufferStart();
+    L(!0), (p = d.current) == null || p.bufferStart();
   }, me = (p) => {
-    p && typeof p.preventDefault == "function" && p.preventDefault(), U((b) => {
+    p && typeof p.preventDefault == "function" && p.preventDefault(), A((b) => {
       var N, ge;
-      const F = !b, L = (ge = (N = s.current) == null ? void 0 : N.textTracks) == null ? void 0 : ge[0];
-      return S(ct(L)), F;
+      const E = !b, M = (ge = (N = s.current) == null ? void 0 : N.textTracks) == null ? void 0 : ge[0];
+      return D(ct(M)), E;
     });
   }, ht = () => {
-    U(!!f.closedCaptionFile);
+    A(!!f.closedCaptionFile);
   }, ye = () => {
     var p;
     return ((p = s.current) == null ? void 0 : p.parentElement) ?? null;
@@ -1024,18 +1026,18 @@ function nn(t) {
     const p = ye();
     p && p.addEventListener("keydown", yt);
   }, yt = (p) => {
-    const b = ye(), F = document.activeElement;
-    if (!vt(b, F) || p.key === "Tab") return;
-    const L = p.code || p.key, N = (p.key || "").toLowerCase();
-    if (F === s.current && (L === "Space" || p.key === " ")) {
+    const b = ye(), E = document.activeElement;
+    if (!vt(b, E) || p.key === "Tab") return;
+    const M = p.code || p.key, N = (p.key || "").toLowerCase();
+    if (E === s.current && (M === "Space" || p.key === " ")) {
       p.preventDefault(), ve();
       return;
     }
-    if (L === "KeyM" || N === "m") {
-      p.preventDefault(), A();
+    if (M === "KeyM" || N === "m") {
+      p.preventDefault(), S();
       return;
     }
-    if (L === "KeyC" || N === "c") {
+    if (M === "KeyC" || N === "c") {
       p.preventDefault(), me(p);
       return;
     }
@@ -1052,7 +1054,7 @@ function nn(t) {
         disablePictureInPicture: !0,
         "aria-label": i,
         src: f.mediaUrl,
-        onTimeUpdate: q,
+        onTimeUpdate: I,
         onEnded: B,
         onClick: x,
         onWaiting: pt,
@@ -1065,7 +1067,7 @@ function nn(t) {
           {
             closedCaptionFile: f.closedCaptionFile,
             closedCaptionLanguage: f.closedCaptionLanguage,
-            setCcContent: S
+            setCcContent: D
           }
         )
       }
@@ -1074,7 +1076,7 @@ function nn(t) {
       Zt,
       {
         onClickPlayPause: ve,
-        onClickMute: A,
+        onClickMute: S,
         isMuted: C,
         isPlaying: g,
         ccButtonLabel: a,

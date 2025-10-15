@@ -1,4 +1,5 @@
 import { VastInformation } from '../vast-model';
+import { RefObject } from 'preact';
 declare global {
     interface Window {
         OmidSessionClient?: any;
@@ -21,5 +22,5 @@ interface AdVerification {
     setVideoContext: (video: HTMLVideoElement) => void;
     mediaEvents: MediaEvents;
 }
-export declare function setupAdVerification(vastInformation: VastInformation, sessionClientUrl: string, omWebUrl: string): Promise<AdVerification | null>;
+export declare function setupAdVerification(vastInformation: VastInformation, sessionClientUrl: string, omWebUrl: string, video?: RefObject<HTMLVideoElement> | null): Promise<AdVerification | null>;
 export {};
